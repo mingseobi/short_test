@@ -1,5 +1,5 @@
 //
-//  ViewController.swift
+//  RoomViewController.swift
 //  short_test
 //
 //  Created by 김민섭 on 2023/11/25.
@@ -7,8 +7,8 @@
 
 import UIKit
 
-class ViewController: UIViewController {
-
+class RoomViewController: UIViewController {
+    
     let homeTitle: UILabel = {
         let label = UILabel()
         label.text = "로고 !!!!"
@@ -41,7 +41,7 @@ class ViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        view.backgroundColor = .systemMint // 시스템 배경색 설정
+        view.backgroundColor = .black // 시스템 배경색 설정
         
         view.addSubview(homeTitle)
         view.addSubview(addButton)
@@ -74,8 +74,6 @@ class ViewController: UIViewController {
     // MARK: - add 버튼 클릭 시 실행될 함수 : 텍스트필드, alert, realm.add
     @objc func add() {
         print("add button Pressed")
-        let secondVC = RoomViewController()
-        self.navigationController?.pushViewController(secondVC, animated: true)
     }
     
     // edit 버튼을 눌렀을 때 실행되는 함수
@@ -83,4 +81,3 @@ class ViewController: UIViewController {
         print("edit button Pressed")
     }
 }
-
